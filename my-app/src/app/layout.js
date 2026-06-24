@@ -1,9 +1,6 @@
-import { Sekuya } from "next/font/google";
 import "./globals.css";
 
-const fontsekuya = Sekuya({
-  weight: "400",
-});
+
 
 export const metadata = {
   title: "BilalProtfolio",
@@ -12,8 +9,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${fontsekuya.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={` h-full antialiased`} 
+    suppressHydrationWarning 
+    >
+      <body className="min-h-full flex flex-col font-sekuya">
+        {children}
+      </body>
     </html>
   );
 }
