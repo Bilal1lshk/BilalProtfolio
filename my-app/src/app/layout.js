@@ -1,3 +1,4 @@
+import Navbar from "./-components/reuseable.jsx/Navbar";
 import "./globals.css";
 
 

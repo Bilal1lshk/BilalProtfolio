@@ -1,12 +1,22 @@
+"use client"
+
 import localsekuya from "next/font/local";
+
 const fontsekuya = localsekuya({
-  src:"./font/Sekuya-Regular.ttf",
+  src: "./font/Sekuya-Regular.ttf",
 });
 import Loader from "./-components/Loader.jsx";
+import Navbar from "./-components/reuseable.jsx/Navbar.jsx";
+import { useState } from "react";
 export default function Home() {
-  return (
-    <div className={`h-auto ${fontsekuya.className}  w-full`}>
-      <Loader />
-    </div>
-  );
+  const [navbar, setnavbar] = useState(false)
+  setTimeout(() => {
+    setnavbar(true)
+  },5000)
+return (
+  <div className={`min-h-screen ${fontsekuya.className} w-full bg-amber-50`}>
+    {navbar && <Navbar />}
+    <Loader />
+  </div>
+);
 }
