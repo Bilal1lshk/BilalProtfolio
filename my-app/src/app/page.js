@@ -12,7 +12,7 @@ export default function Home() {
   const [navbar, setnavbar] = useState(false)
   setTimeout(() => {
     setnavbar(true)
-  },7000)
+  },6000)
 return (
   <div className={`min-h-screen ${fontsekuya.className} w-full bg-[#FFFFFF] text-amber-50`}>
     {navbar && <HomeALL />}
