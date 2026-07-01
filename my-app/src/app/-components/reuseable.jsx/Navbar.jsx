@@ -24,9 +24,9 @@ const itemVariants = {
 
 export default function Navbar() {
     return (
-        <div className="bg-g-light text-white flex justify-end items-start w-full">
-            <div>
-                <img className={"h-[120px]"} src={"/bilalimg.png"} alt="img" />
+        <div className="bg-g-light text-white flex justify-between items-start w-full">
+            <div className="ml-4">
+                <img className={"h-[120px] w-[150px]"} src={"/bilalimg.png"} alt="img" />
             </div>
             <motion.div
                 variants={containerVariants}

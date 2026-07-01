@@ -1,7 +1,7 @@
 "use client"
 
 import localsekuya from "next/font/local";
-
+import HomeALL from "./-components/Home.jsx";
 const fontsekuya = localsekuya({
   src: "./font/Sekuya-Regular.ttf",
 });
@@ -14,8 +14,8 @@ export default function Home() {
     setnavbar(true)
   },7000)
 return (
-  <div className={`min-h-screen ${fontsekuya.className} w-full bg-text-body`}>
-    {navbar && <Navbar />}
+  <div className={`min-h-screen ${fontsekuya.className} w-full bg-[#FFFFFF] text-amber-50`}>
+    {navbar && <HomeALL />}
     <Loader />
   </div>
 );
