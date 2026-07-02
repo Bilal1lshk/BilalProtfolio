@@ -14,7 +14,7 @@ export default function Home() {
     setnavbar(true)
   },6000)
 return (
-  <div className={`min-h-screen ${fontsekuya.className} w-full bg-[#FFFFFF] text-amber-50`}>
+  <div className={`min-h-screen ${fontsekuya.className} w-full bg-[#FFFFFF] text-black`}>
     {navbar && <HomeALL />}
     <Loader />
   </div>

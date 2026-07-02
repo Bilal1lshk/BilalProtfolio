@@ -3,6 +3,8 @@ import Navbar from './reuseable.jsx/Navbar'
 import Aboutme from './Aboutme'
 import Services from './Services'
 import Projects from './Projects'
+import Expertise from './Skills'
+import TechStack from './TechStack'
 
 export default function HomeALL() {
     return (
@@ -10,7 +12,9 @@ export default function HomeALL() {
             <Navbar />
             <Aboutme />
             <Services />
-            <Projects/>
+            <Projects />
+            <Expertise />
+            <TechStack/>
         </div>
     )
 }
