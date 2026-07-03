@@ -1,5 +1,12 @@
 import React from 'react'
-
+const TechStackFullStack = {
+    frontend: ["Reactjs", "Nextjs", "Tailwindcss", "Framermotion",],
+    backend: ["Expressjs", "Mongodb", "Nodejs", "REST APIs", "JWTAuthentication", "Docker"],
+    Tools: ["VS Code", "Postman", "Git & GitHub", "Vercel And Netilfy"]
+}
+const TechStackAi = {
+    AllSkills: ["AI Agents", "LangChain", "NumPy", "Retrieval-Augmented Generation"]
+}
 export default function TechStack() {
     return (
         <div>
@@ -23,6 +30,12 @@ export default function TechStack() {
 
                     </div>
 
+                </div>
+                <div>
+                    <h2>Frontend</h2>
+                    <div>
+
+                    </div>
                 </div>
 
 
