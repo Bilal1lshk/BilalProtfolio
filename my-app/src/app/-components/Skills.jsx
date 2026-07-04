@@ -43,7 +43,7 @@ const cardVariants = {
 
 export default function Expertise() {
     return (
-        <section className='w-full px-6 py-20 sm:px-8 lg:px-12'>
+        <section id="Experise" className='w-full px-6 py-20 sm:px-8 lg:px-12'>
 
             {/* Heading */}
             <div className='flex flex-col items-center gap-4 text-center mb-14'>

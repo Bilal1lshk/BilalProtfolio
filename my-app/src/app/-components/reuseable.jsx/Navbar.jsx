@@ -1,5 +1,6 @@
 "use client"
-import { motion } from "framer-motion"; const containerVariants = {
+import { motion } from "framer-motion"; import Link from "next/link";
+const containerVariants = {
     hidden: {},
     visible: {
         transition: {
@@ -35,19 +36,22 @@ export default function Navbar() {
                 className="text-white flex justify-end items-start w-full"
             >
                 <motion.div variants={itemVariants} className="h-[60px] bg-g-accent p-3.5">
-                    Services
+                    <Link href={"#Services"}>Services</Link>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="h-[80px] bg-g-accent p-3.5">
-                    Skills
+                    <Link href={"#Experise"}> Experise</Link>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="h-[100px] bg-g-accent p-3.5">
-                    Testimonials
+                    <Link href={"#Skills"}>Skills</Link>
                 </motion.div>
 
+                <motion.div variants={itemVariants} className="h-[110px] bg-g-accent p-3.5">
+                 <Link href={"#Process"}>Process</Link>   
+                </motion.div>
                 <motion.div variants={itemVariants} className="h-[120px] bg-g-accent p-3.5">
-                    Hire Me
+                  <Link href={"#Hireme"}> Hire me</Link>  
                 </motion.div>
             </motion.div>
 

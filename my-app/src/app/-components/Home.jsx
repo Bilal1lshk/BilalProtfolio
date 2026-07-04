@@ -15,7 +15,6 @@ export default function HomeALL() {
             <Navbar />
             <Aboutme />
             <Services />
-            <Projects />
             <Expertise />
             <TechStack />
             <QA />

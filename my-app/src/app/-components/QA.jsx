@@ -47,7 +47,7 @@ export default function QA() {
 
                 <div className='flex flex-col gap-5 mt-7'>
                     {faqs.map((faq, index) => (
-                        <article key={faq.question} className='group overflow-hidden rounded-[28px] h-auto w-full border border-white/70 bg-gray-700 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1'>
+                        <article key={faq.question} className='group overflow-hidden rounded-[28px] h-auto w-full border border-white/70 bg-gray-500 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1'>
                             <div className='flex justify-between w-full items-center pb-5'>
                                 <div className='text-gray-300'>Question</div>
                                 <div onClick={() => toggleopenandclose(index)} className='flex h-8 w-8 items-center justify-center rounded-full bg-black text-2xl text-white'>{hidden && openid === index?"-":"+"}</div>
