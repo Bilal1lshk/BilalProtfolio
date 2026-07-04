@@ -19,8 +19,9 @@ export default function HomeALL() {
             <Expertise />
             <TechStack />
             <QA />
-            <Contact />
             <Process />
+            <Contact />
+
         </div>
     )
 }
