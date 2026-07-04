@@ -5,25 +5,21 @@ const techCategories = [
         title: 'Frontend Technologies',
         description: 'Building modern, responsive interfaces with performance in mind.',
         items: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
-        accent: 'from-emerald-400 to-teal-500',
     },
     {
         title: 'Backend',
         description: 'Reliable APIs, data handling, and secure server-side architecture.',
         items: ['Express.js', 'Node.js', 'MongoDB', 'REST APIs', 'JWT', 'Docker'],
-        accent: 'from-cyan-400 to-sky-500',
     },
     {
         title: 'Tools',
         description: 'The workflow stack that keeps shipping fast and clean.',
         items: ['VS Code', 'Postman', 'Git & GitHub', 'Vercel', 'Netlify'],
-        accent: 'from-violet-400 to-fuchsia-500',
     },
     {
         title: 'AI Skills',
         description: 'Exploring intelligent systems and practical AI integrations.',
         items: ['AI Agents', 'LangChain', 'NumPy', 'RAG'],
-        accent: 'from-amber-400 to-orange-500',
     },
 ]
 
@@ -49,15 +45,18 @@ export default function TechStack() {
                         </div>
                     </div>
 
-                    <div className='grid gap-6 md:grid-cols-2 xl:grid-cols-4'>
-                        {techCategories.map((category) => (
+                    <div className='flex flex-col gap-9'>
+                        {techCategories.map((category, index) => (
+
                             <div
                                 key={category.title}
-                                className='group relative overflow-hidden rounded-2xl border border-emerald-100 bg-white/80 p-5 shadow-[0_10px_35px_rgba(16,185,129,0.12)] backdrop-blur transition-transform duration-300 hover:-translate-y-1'
+                                className={`group relative flex flex-col z-99 ${index === 1 || index === 3 ? "self-end" : ""}   rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
                             >
-                                <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${category.accent}`} />
-                                <h3 className='text-lg font-semibold text-g-deep'>{category.title}</h3>
-                                <p className='mt-2 text-sm leading-6 text-gray-600'>{category.description}</p>
+                                <div className={`${index >= 0 && index<=2 ? "absolute -bottom-50 z-5 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></div>
+                                <div className={`${index === 0 || index === 3 ? "" : "absolute top-40 z-5 -left-[50%] h-[4px] w-[260px] w-1 bg-g-light"}`}></div>
+
+                                <h3 className=' font-semibold bg-g-deep  flex justify-center text-2xl p-2 rounded-xl text-white'>{category.title}</h3>
+                                <p className='mt-2 text-sm leading-6 text-gray-200'>{category.description}</p>
 
                                 <div className='mt-4 flex flex-wrap gap-2'>
                                     {category.items.map((item) => (
