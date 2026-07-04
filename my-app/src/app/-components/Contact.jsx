@@ -1,0 +1,113 @@
+'use client'
+
+import { useState } from 'react'
+
+export default function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const [status, setStatus] = useState('')
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setStatus('Thank you! Your message has been prepared. I will follow up shortly.')
+    setForm({ name: '', email: '', subject: '', message: '' })
+  }
+
+  return (
+    <section id='contact' className='bg-g-deep/5 text-slate-900'>
+      <div className='mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-12'>
+        <div className='mx-auto max-w-3xl text-center'>
+          <p className='text-sm uppercase tracking-[0.35em] text-g-primary'>Contact</p>
+          <h2 className='mt-4 text-3xl font-semibold text-g-deep'>Let’s build your next project together</h2>
+          <p className='mt-4 text-gray-600'>Share a few details about your idea and I’ll get back to you with a plan, timeline, and next steps.</p>
+        </div>
+
+        <div className='mt-12 grid gap-8 xl:grid-cols-[1.1fr_0.9fr]'>
+          <div className='rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]'>
+            <p className='text-lg font-semibold text-g-deep'>Ready to get started?</p>
+            <p className='mt-4 text-gray-600'>Tell me about your project, timeline, and the business outcome you want to achieve. I’ll respond with a concise plan and clear next steps.</p>
+
+            <div className='mt-8 space-y-5'>
+              <div>
+                <p className='font-semibold text-slate-900'>Email</p>
+                <p className='text-sm text-gray-600'>hello@yourdomain.com</p>
+              </div>
+              <div>
+                <p className='font-semibold text-slate-900'>Availability</p>
+                <p className='text-sm text-gray-600'>Open for new AI and web app projects</p>
+              </div>
+              <div>
+                <p className='font-semibold text-slate-900'>What I need</p>
+                <p className='text-sm text-gray-600'>A short summary of your idea and the value you want it to deliver.</p>
+              </div>
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit} className='rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]'>
+            <div className='grid gap-4 sm:grid-cols-2'>
+              <label className='space-y-2 text-sm text-slate-700'>
+                <span>Name</span>
+                <input
+                  type='text'
+                  name='name'
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className='w-full rounded-2xl border border-gray-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-g-primary focus:ring-2 focus:ring-g-light/40'
+                />
+              </label>
+              <label className='space-y-2 text-sm text-slate-700'>
+                <span>Email</span>
+                <input
+                  type='email'
+                  name='email'
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  className='w-full rounded-2xl border border-gray-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-g-primary focus:ring-2 focus:ring-g-light/40'
+                />
+              </label>
+            </div>
+
+            <label className='mt-4 space-y-2 text-sm text-slate-700'>
+              <span>Subject</span>
+              <input
+                type='text'
+                name='subject'
+                value={form.subject}
+                onChange={handleChange}
+                required
+                className='w-full rounded-2xl border border-gray-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-g-primary focus:ring-2 focus:ring-g-light/40'
+              />
+            </label>
+
+            <label className='mt-4 space-y-2 text-sm text-slate-700'>
+              <span>Message</span>
+              <textarea
+                name='message'
+                value={form.message}
+                onChange={handleChange}
+                rows='5'
+                required
+                className='w-full rounded-2xl border border-gray-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-g-primary focus:ring-2 focus:ring-g-light/40'
+              />
+            </label>
+
+            <button
+              type='submit'
+              className='mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-g-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-g-deep'
+            >
+              Send message
+            </button>
+
+            {status && <p className='mt-4 text-sm text-emerald-700'>{status}</p>}
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+}

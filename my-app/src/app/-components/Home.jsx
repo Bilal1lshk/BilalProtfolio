@@ -5,6 +5,9 @@ import Services from './Services'
 import Projects from './Projects'
 import Expertise from './Skills'
 import TechStack from './TechStack'
+import QA from './QA'
+import Contact from './Contact'
+import Process from './Process'
 
 export default function HomeALL() {
     return (
@@ -14,7 +17,10 @@ export default function HomeALL() {
             <Services />
             <Projects />
             <Expertise />
-            <TechStack/>
+            <TechStack />
+            <QA />
+            <Contact />
+            <Process />
         </div>
     )
 }

@@ -52,8 +52,8 @@ export default function TechStack() {
                                 key={category.title}
                                 className={`group relative flex flex-col z-99 ${index === 1 || index === 3 ? "self-end" : ""}   rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
                             >
-                                <div className={`${index >= 0 && index<=2 ? "absolute -bottom-50 z-5 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></div>
-                                <div className={`${index === 0 || index === 3 ? "" : "absolute top-40 z-5 -left-[50%] h-[4px] w-[260px] w-1 bg-g-light"}`}></div>
+                                <div className={`${index === 0 || index === 2 ? "absolute -bottom-50 z-5 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></div>
+                                <div className={`${index === 1|| index === 3 ? "absolute top-40 z-5 -left-[50%] h-[4px] w-[260px] w-1 bg-g-light" : ""}`}></div>
 
                                 <h3 className=' font-semibold bg-g-deep  flex justify-center text-2xl p-2 rounded-xl text-white'>{category.title}</h3>
                                 <p className='mt-2 text-sm leading-6 text-gray-200'>{category.description}</p>
