@@ -104,14 +104,14 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
                             transition={{ duration: 0.25 }}
-                            className="flex w-full max-w-sm flex-col gap-4"
+                            className="flex w-full max-w-sm flex-col gap-4 mt-12  md:mt-1 "
                         >
                             {menuItems.map((item) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-center text-lg font-medium transition hover:bg-white/20"
+                                    className="rounded-2xl border border-white/20 bg-white/10  px-3 md:px-5 py-3 md:py-4 text-center text-md md:text-lg font-medium transition hover:bg-white/20"
                                 >
                                     {item.label}
                                 </Link>

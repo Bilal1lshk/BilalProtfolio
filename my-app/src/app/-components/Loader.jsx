@@ -56,12 +56,12 @@ export default function Loader() {
 
             {/* Content */}
             <div className="flex flex-col items-center h-screen w-full relative z-10">
-                <div className="h-[400px] flex justify-center items-center text-6xl w-full">
-                    <h1 className="text-g-deep mt-[140px]">Portfolio</h1>
+                <div className="h-[400px] flex justify-center items-center text-4xl md:text-6xl w-full">
+                    <h1 className="text-g-deep md:mt-[140px]">Portfolio</h1>
                 </div>
 
                 {/* Loading bar */}
-                <div className="w-[200px] h-[7px] relative bg-gray-400 mb-10 rounded-lg -mt-10">
+                <div className="w-[200px] h-[7px] relative bg-gray-400 mb-10 rounded-lg -mt-40 md:-mt-10">
                     <div
                         className="h-[7px] absolute top-0 bg-g-deep rounded-lg transition-none"
                         style={{ width: `${progress}%` }}
@@ -71,7 +71,7 @@ export default function Loader() {
                 {/* Percentage */}
                 <p className="text-g-deep font-mono text-sm mb-4">{progress}%</p>
 
-                <p className="text-white text-xl w-full flex justify-center">
+                <p className="text-white text-lg text-center mdtext-xl w-full flex justify-center">
                     BILAL AI Full Stack Developer
                 </p>
             </div>
