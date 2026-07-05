@@ -24,7 +24,7 @@ const services = [
         icon: <FaRocket />,
         link: '#Hireme',
     }, {
-        title: 'AI Agents & Workflow Automation',
+        title: 'AI Agents &  Automation',
         description:
             'Custom AI agents that automate repetitive tasks, handle workflows, and improve productivity across your business.',
         icon: <FaRobot />,
@@ -78,7 +78,7 @@ export default function Services() {
             </div>
 
             {/* Tall wrapper — useScroll tracks this to drive horizontal motion */}
-            <div ref={containerRef} className='h-[300vh] items-center relative '>
+            <div ref={containerRef} className='h-[350vh] items-center relative '>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
                 <div className='sticky top-0 h-screen flex items-center overflow-hidden'>
@@ -86,7 +86,7 @@ export default function Services() {
                     {/* This is the element that actually moves horizontally */}
                     <motion.div
                         style={{ x }}
-                        className='flex gap-8 px-12 w-max'
+                        className='flex gap-8 px-12 mt-10 w-max h-full'
                     >
                         {services.map((service, index) => (
                             <motion.article
@@ -99,7 +99,7 @@ export default function Services() {
                                     ease: 'easeOut',
                                 }}
                                 viewport={{ once: true, amount: 0.2 }}
-                                className='rounded-3xl w-[480px] shrink-0 border border-gray-200 bg-[#f8f8f8] p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl'
+                                className='rounded-3xl w-[400px] md:w-[480px] m-5 h-[440px] shrink-0 border border-gray-200 bg-[#f8f8f8] p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl'
                             >
                                 {/* Icon */}
                                 <div className='mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-g-deep text-2xl text-white'>
@@ -117,7 +117,7 @@ export default function Services() {
                                 {/* CTA */}
                                 <a
                                     href={service.link}
-                                    className='mt-6 inline-flex items-center text-sm font-semibold text-g-primary transition hover:text-g-deep'
+                                    className='mt-6 pb-5 inline-flex items-center text-sm font-semibold text-g-primary transition hover:text-g-deep'
                                 >
                                     Let&apos;s talk →
                                 </a>
