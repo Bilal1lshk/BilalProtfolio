@@ -29,12 +29,14 @@ const phases = [
 
 export default function Process() {
   const container = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 50, },
     show: {
       opacity: 1,
       y: 0,
+
       transition: {
         delay: 0.2,
+        duration: 0.6,
         staggerChildren: 0.2,
       },
     },

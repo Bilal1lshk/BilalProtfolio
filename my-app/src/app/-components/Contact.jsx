@@ -1,5 +1,5 @@
 'use client'
-
+import { motion } from "framer-motion"
 import { useState } from 'react'
 
 export default function Contact() {
@@ -16,25 +16,24 @@ export default function Contact() {
         setStatus('Thank you! Your message has been prepared. I will follow up shortly.')
         setForm({ name: '', email: '', subject: '', message: '' })
     }
-
     return (
         <section id='Hireme' className='bg-g-deep/5 text-slate-900'>
-            <div className='mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-12'>
-                <div className='mx-auto max-w-3xl text-center'>
-                    <p className='text-sm uppercase tracking-[0.35em] text-g-primary'>Contact</p>
-                    <h2 className='mt-4 text-3xl font-semibold text-g-deep'>Let’s build your next project together</h2>
-                    <p className='mt-4 text-gray-600'>Share a few details about your idea and I’ll get back to you with a plan, timeline, and next steps.</p>
+            <div className='mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 max-h-auto'>
+                <div className='mx-auto max-w-3xl text-center max-h-auto'>
+                    <motion.p initial={{ letterSpacing: '50px' }} viewport={{ once: true }} whileInView={{ letterSpacing: '2px' }} exit={{ letterSpacing: '2px' }} className='text-sm uppercase tracking-[0.3em] text-g-primary'>Contact</motion.p>
+                    <h2 className='mt-4 text-3xl font-semibold text-g-deep sm:text-4xl'>Let’s build your next project together</h2>
+                    <p className='mx-auto mt-4 max-w-2xl text-sm text-gray-600 sm:text-base'>Share a few details about your idea and I’ll get back to you with a plan, timeline, and next steps.</p>
                 </div>
 
-                <div className='mt-12 grid gap-8 xl:grid-cols-[1.1fr_0.9fr]'>
-                    <div className='rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]'>
-                        <p className='text-lg font-semibold text-g-deep'>Ready to get started?</p>
-                        <p className='mt-4 text-gray-600'>Tell me about your project, timeline, and the business outcome you want to achieve. I’ll respond with a concise plan and clear next steps.</p>
+                <div className='mt-12 grid gap-8 xl:grid-cols-[1.05fr_0.95fr]'>
+                    <div className='rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.08)] sm:p-8'>
+                        <motion.p initial={{ letterSpacing: '50px' }} whileInView={{ letterSpacing: '2px' }} exit={{ letterSpacing: '2px' }} transition={{ ease: 'linear', duration: 0.4 }} viewport={{ once: true }} className='text-lg font-semibold text-g-deep'>Ready to get started?</motion.p>
+                        <p className='mt-4 text-sm leading-7 text-gray-600 sm:text-base'>Tell me about your project, timeline, and the business outcome you want to achieve. I’ll respond with a concise plan and clear next steps.</p>
 
                         <div className='mt-8 space-y-5'>
                             <div>
                                 <p className='font-semibold text-slate-900'>Email</p>
-                                <p className='text-sm text-gray-600'>hello@yourdomain.com</p>
+                                <motion.p initial={{ x: -50, opacity: 0.6 }} whileInView={{ x: 0, opacity: 1 }} transition={{ ease: 'easeIn' }} viewport={{ once: true }} className='break-all p-2 text-sm text-gray-600 lowercase'>bilalsheikhsb77@gmail.com</motion.p>
                             </div>
                             <div>
                                 <p className='font-semibold text-slate-900'>Availability</p>
@@ -47,7 +46,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <form onSubmit={handleSubmit} className='rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]'>
+                    <form onSubmit={handleSubmit} className='rounded-[28px] border border-white/70 bg-white/90  pt-6 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.08)] sm:p-8'>
                         <div className='grid gap-4 sm:grid-cols-2'>
                             <label className='space-y-2 text-sm text-slate-700'>
                                 <span>Name</span>
@@ -73,7 +72,7 @@ export default function Contact() {
                             </label>
                         </div>
 
-                        <label className='mt-4 space-y-2 text-sm text-slate-700'>
+                        <label className='mt-4 block space-y-2 text-sm text-slate-700'>
                             <span>Subject</span>
                             <input
                                 type='text'
@@ -85,7 +84,7 @@ export default function Contact() {
                             />
                         </label>
 
-                        <label className='mt-4 space-y-2 text-sm text-slate-700'>
+                        <label className='mt-4 block space-y-2 text-sm text-slate-700'>
                             <span>Message</span>
                             <textarea
                                 name='message'

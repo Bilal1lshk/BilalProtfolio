@@ -53,10 +53,10 @@ export default function TechStack() {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4, ease: "easeIn", duration: 0.3 }}
                                 key={category.title}
-                                className={`group relative z-10 flex flex-col ${index === 1 || index === 3 ? "self-end" : ""} rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
+                                className={`group relative z-10 flex flex-col ${index === 1 || index === 3 ? "self-end" : ""} rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[70%] md:w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
                             >
                                 <motion.div className={`${index === 0 || index === 2 ? "absolute -bottom-50 -z-10 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></motion.div>
-                                <motion.div initial={{ heigth: 0 }} whileInView={{ heigth: "4px" }} transition={{ease: "easeIn", duration: 0.3 }} className={`${index === 1 || index === 3 ? "absolute top-40 -z-10 -left-[50%] h-[4px] w-[255px] w-1 bg-g-light" : ""}`}></motion.div>
+                                <motion.div initial={{ heigth: 0 }} whileInView={{ heigth: "4px" }} transition={{ease: "easeIn", duration: 0.3 }} className={`${index === 1 || index === 3 ? "absolute top-40 -z-10 -left-[50%] h-[4px] w-0 md:w-[255px] bg-g-light" : ""}`}></motion.div>
 
                                 <h3 className=' font-semibold bg-g-deep  flex justify-center text-2xl p-2 rounded-xl text-white'>{category.title}</h3>
                                 <p className='mt-2 text-sm leading-6 text-gray-200'>{category.description}</p>

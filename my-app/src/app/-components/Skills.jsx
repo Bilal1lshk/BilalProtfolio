@@ -4,28 +4,28 @@ import { motion } from 'framer-motion'
 const expertiseContent = [
     {
         title: "AI SaaS Builds",
-        width: "60%",
+        width: "w-full md:w-1/2",
         description: "Designing and shipping subscription-ready SaaS platforms powered by AI — smart dashboards, usage-based billing, user auth, and AI features baked in from day one. From idea to a live product clients actually pay for.",
         skills: ['OpenAI API', 'Stripe', 'Next.js', 'MongoDB', 'JWT Auth'],
         number: "01",
     },
     {
         title: "AI Agents",
-        width: "35%",
+        width: "w-full md:w-1/3",
         description: "Building goal-driven AI agents that think, plan, and act — web scrapers, research assistants, automated workflows, and multi-step task runners using LangChain Agents, OpenAI Functions & tool-use APIs.",
         skills: ['LangChain', 'OpenAI Functions', 'Python', 'Tool Use', 'AutoGPT'],
         number: "02",
     },
     {
         title: "Full Stack Web Apps",
-        width: "35%",
+        width: "w-full md:w-1/2",
         description: "End-to-end product development with MongoDB, Express, React & Node.js — clean architecture, REST APIs, JWT auth, cloud deployment, and scalable codebases built for real users and real traffic.",
         skills: ['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
         number: "03",
     },
     {
         title: "RAG & Chat Systems",
-        width: "60%",
+        width: "w-full md:w-1/3",
         description: "Building Retrieval-Augmented Generation pipelines that let AI answer questions from your own data — documents, PDFs, databases, and knowledge bases — with accurate, source-grounded responses.",
         skills: ['LangChain', 'Pinecone', 'OpenAI', 'Vector DBs', 'PDF Parsing'],
         number: "04",
@@ -59,18 +59,17 @@ export default function Expertise() {
                 </p>
             </div>
 
-            <div className='flex flex-wrap gap-4 w-full'>
+            <div className='flex flex-col justify-center md:flex-row flex-wrap gap-4 w-full'>
                 {expertiseContent.map((data, i) => (
                     <motion.div
-                    
+
                         key={data.title}
                         custom={i}
                         variants={cardVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        style={{ width: `calc(${data.width} - 0.5rem)` }}
-                        className='bg-g-deep/80 rounded-3xl p-7 flex flex-col justify-between min-h-[340px] border border-white/5 hover:border-g-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20'
+                        className={`bg-g-deep/80 rounded-3xl p-7 flex flex-col justify-between  ${data?.width} min-h-[340px] border border-white/5 hover:border-g-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
                     >
                         <div>
                             <div className='flex items-start justify-between mb-4'>
