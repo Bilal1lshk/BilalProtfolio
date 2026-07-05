@@ -55,7 +55,7 @@ export default function Services() {
 
             {/* Heading — outside sticky zone so it scrolls away naturally */}
             <div className='px-6 pt-20 sm:px-8 lg:px-12'>
-                <div className='mx-auto max-w-6xl h-full '>
+                <div className='mx-auto max-w-6xl h-auto '>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -78,10 +78,10 @@ export default function Services() {
             </div>
 
             {/* Tall wrapper — useScroll tracks this to drive horizontal motion */}
-            <div ref={containerRef} className='h-[350vh] items-center relative '>
+            <div ref={containerRef} className='h-[300vh] items-center relative '>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
-                <div className='sticky top-0 h-screen flex items-center overflow-hidden'>
+                <div className='sticky top-0 h-full flex items-center overflow-hidden'>
 
                     {/* This is the element that actually moves horizontally */}
                     <motion.div
@@ -117,7 +117,7 @@ export default function Services() {
                                 {/* CTA */}
                                 <a
                                     href={service.link}
-                                    className='mt-6 pb-5 inline-flex items-center text-sm font-semibold text-g-primary transition hover:text-g-deep'
+                                    className='mt-6 pb-1 inline-flex items-center text-sm font-semibold text-g-primary transition hover:text-g-deep'
                                 >
                                     Let&apos;s talk →
                                 </a>
