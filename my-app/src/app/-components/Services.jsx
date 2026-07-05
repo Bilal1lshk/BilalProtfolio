@@ -8,34 +8,34 @@ const services = [
         description:
             'Modern, fast, and visually striking websites designed to showcase your brand and work with confidence.',
         icon: <FaCode />,
-        link: '#contact',
+        link: '#Hireme',
     },
     {
         title: 'AI-Powered Web Apps',
         description:
             'Smart experiences using OpenAI, LangChain, and custom automation to make your product more useful and engaging.',
         icon: <FaBrain />,
-        link: '#contact',
+        link: '#Hireme',
     },
     {
         title: 'Full-Stack Product Builds',
         description:
             'End-to-end development for scalable apps, dashboards, and digital products with polished user experiences.',
         icon: <FaRocket />,
-        link: '#contact',
+        link: '#Hireme',
     }, {
         title: 'AI Agents & Workflow Automation',
         description:
             'Custom AI agents that automate repetitive tasks, handle workflows, and improve productivity across your business.',
         icon: <FaRobot />,
-        link: '#contact',
+        link: '#Hireme',
     },
     {
         title: 'RAG Systems & AI Search',
         description:
             'Build intelligent knowledge systems using RAG to provide accurate answers from your documents and business data.',
         icon: <FaDatabase />,
-        link: '#contact',
+        link: '#Hireme',
     },
 ]
 
@@ -51,11 +51,11 @@ export default function Services() {
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
 
     return (
-        <section id="Services" className='w-full bg-white text-black'>
+        <section id="Services" className='w-full h-full bg-white text-black'>
 
             {/* Heading — outside sticky zone so it scrolls away naturally */}
             <div className='px-6 pt-20 sm:px-8 lg:px-12'>
-                <div className='mx-auto max-w-6xl'>
+                <div className='mx-auto max-w-6xl h-full '>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function Services() {
             </div>
 
             {/* Tall wrapper — useScroll tracks this to drive horizontal motion */}
-            <div ref={containerRef} className='h-[300vh] relative bg-amber-500'>
+            <div ref={containerRef} className='h-[300vh] items-center relative '>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
                 <div className='sticky top-0 h-screen flex items-center overflow-hidden'>
@@ -91,8 +91,8 @@ export default function Services() {
                         {services.map((service, index) => (
                             <motion.article
                                 key={service.title}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0,}}
+                                whileInView={{ opacity: 1,}}
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.15,
