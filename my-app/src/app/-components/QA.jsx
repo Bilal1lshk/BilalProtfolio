@@ -8,7 +8,7 @@ const faqs = [
             'Yes! As a MEAN stack developer, I handle everything end-to-end — MongoDB for your data, Express & Node.js for the backend logic, and Angular for a smooth, responsive front-end. You bring the idea, I deliver a fully working product.',
     },
     {
-        question: 'Can you add AI features to make my app smarter, like a chatbot or recommendations?',
+        question: 'Can you add AI features to make my app smarter, like a chatbot or anything else?',
         answer:
             'Absolutely — that’s actually my specialty. I integrate AI capabilities like chatbots, smart search, content generation, and recommendation systems directly into MEAN stack apps using tools like OpenAI, LangChain, and custom ML APIs.',
     },

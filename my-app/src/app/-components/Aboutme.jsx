@@ -7,8 +7,8 @@ export default function Aboutme() {
 
             <div className='h-full w-full mt-1 flex justify-center relative'>
                 <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} src="/Bilalmainimg.png
-            " className='h-[700px] w-[900px] object-cover overflow-hidden mt-14 lg:mt-2' alt="" />
-                <motion.button initial={{ opacity: 0.6, rotate: 0 }} whileInView={{ opacity: 1, rotate: 45 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} className='absolute bg-black  rounded-xl p-1 top-70 text-4xl text-amber-50 left-[980px]'>
+            " className='h-[700px] w-[900px] object-cover overflow-hidden mt-24 lg:mt-2' alt="" />
+                <motion.button initial={{ opacity: 0.6, rotate: 0 }} whileInView={{ opacity: 1, rotate: 45 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} className=' hidden md:absolute bg-black  rounded-xl p-1 top-70 text-4xl text-amber-50 md:left-[980px]'>
                     <FaArrowDown />
 
                 </motion.button>
@@ -21,7 +21,7 @@ export default function Aboutme() {
                         MEEN Stack custom development
                     </h3>
                 </motion.div>
-                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100   w-[460px] absolute top-[600px]  lg:top-[400px] md:left-[740px]'>
+                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100  w-[300px] md:w-[460px] absolute top-[600px]  lg:top-[400px] md:left-[740px]'>
                     <h3 className='uppercase p-1.5'>
                         Making apps smarter with OpenAI, LangChain & custom-trained models.
                     </h3>
