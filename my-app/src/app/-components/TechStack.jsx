@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { delay, motion } from "framer-motion"
 const techCategories = [
     {
         title: 'Frontend Technologies',
@@ -48,12 +48,15 @@ export default function TechStack() {
                     <div className='flex flex-col gap-9'>
                         {techCategories.map((category, index) => (
 
-                            <div
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.4, ease: "easeIn", duration: 0.3 }}
                                 key={category.title}
-                                className={`group relative flex flex-col z-99 ${index === 1 || index === 3 ? "self-end" : ""}   rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
+                                className={`group relative z-10 flex flex-col ${index === 1 || index === 3 ? "self-end" : ""} rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
                             >
-                                <div className={`${index === 0 || index === 2 ? "absolute -bottom-50 z-5 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></div>
-                                <div className={`${index === 1|| index === 3 ? "absolute top-40 z-5 -left-[50%] h-[4px] w-[260px] w-1 bg-g-light" : ""}`}></div>
+                                <motion.div className={`${index === 0 || index === 2 ? "absolute -bottom-50 -z-10 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></motion.div>
+                                <motion.div initial={{ heigth: 0 }} whileInView={{ heigth: "4px" }} transition={{ease: "easeIn", duration: 0.3 }} className={`${index === 1 || index === 3 ? "absolute top-40 -z-10 -left-[50%] h-[4px] w-[255px] w-1 bg-g-light" : ""}`}></motion.div>
 
                                 <h3 className=' font-semibold bg-g-deep  flex justify-center text-2xl p-2 rounded-xl text-white'>{category.title}</h3>
                                 <p className='mt-2 text-sm leading-6 text-gray-200'>{category.description}</p>
@@ -62,13 +65,13 @@ export default function TechStack() {
                                     {category.items.map((item) => (
                                         <span
                                             key={item}
-                                            className='rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-sm font-medium text-g-deep transition-colors duration-300 group-hover:bg-emerald-100'
+                                            className='rounded-full border  border-emerald-100 bg-emerald-50 px-3 py-1 text-sm font-medium text-g-deep transition-colors duration-300 group-hover:bg-emerald-100'
                                         >
                                             {item}
                                         </span>
                                     ))}
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

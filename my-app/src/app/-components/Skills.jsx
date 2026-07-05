@@ -62,6 +62,7 @@ export default function Expertise() {
             <div className='flex flex-wrap gap-4 w-full'>
                 {expertiseContent.map((data, i) => (
                     <motion.div
+                    
                         key={data.title}
                         custom={i}
                         variants={cardVariants}

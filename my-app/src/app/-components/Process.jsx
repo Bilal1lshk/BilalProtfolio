@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { delay, easeIn, motion } from "framer-motion"
 const phases = [
   {
     id: '01',
@@ -28,6 +28,17 @@ const phases = [
 ]
 
 export default function Process() {
+  const container = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.2,
+        staggerChildren: 0.2,
+      },
+    },
+  };
   return (
     <section id='Process' className='relative mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8'>
       <div className='mx-auto mb-10 max-w-3xl text-center'>
@@ -40,7 +51,7 @@ export default function Process() {
         <div className='pointer-events-none absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 rounded-full bg-emerald-200/50' />
 
         {phases.map((phase, index) => (
-          <div key={phase.id} className='relative z-10 flex items-start gap-6 sm:gap-8'>
+          <motion.div variants={container} initial={"hidden"} whileInView={"show"} key={phase.id} className='relative z-10 flex items-start gap-6 sm:gap-8'>
             <div className='flex flex-col items-center'>
               <div className='flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-xl font-bold text-white shadow-lg'>
                 {phase.id}
@@ -64,7 +75,7 @@ export default function Process() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
