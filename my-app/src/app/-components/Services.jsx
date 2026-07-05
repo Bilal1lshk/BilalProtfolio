@@ -54,7 +54,7 @@ export default function Services() {
         <section id="Services" className='w-full bg-white text-black'>
 
             {/* Heading — outside sticky zone so it scrolls away naturally */}
-            <div className='px-6 pt-20 pb-12 sm:px-8 lg:px-12'>
+            <div className='px-6 pt-20 sm:px-8 lg:px-12'>
                 <div className='mx-auto max-w-6xl'>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ export default function Services() {
             </div>
 
             {/* Tall wrapper — useScroll tracks this to drive horizontal motion */}
-            <div ref={containerRef} className='h-[300vh] relative'>
+            <div ref={containerRef} className='h-[300vh] relative bg-amber-500'>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
                 <div className='sticky top-0 h-screen flex items-center overflow-hidden'>
