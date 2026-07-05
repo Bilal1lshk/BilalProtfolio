@@ -25,7 +25,7 @@ const techCategories = [
 
 export default function TechStack() {
     return (
-        <div>
+        <div className='bg-amber-50'>
             <div id='Skills' className='relative overflow-hidden rounded-[28px] border pb-[180px] border-white/50 bg-gradient-to-br from-gray-50 via-white to-emerald-50 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-md'>
                 <div className='pointer-events-none absolute left-1/2 top-0 -z-10 h-[320px] w-[520px] -translate-x-1/2 rounded-full bg-g-accent/20 blur-[70px]' />
 

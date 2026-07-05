@@ -3,7 +3,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { easeOut, motion } from "framer-motion"
 export default function Aboutme() {
     return (
-        <div>
+        <div className='bg-amber-50'>
 
             <div className='h-full w-full mt-1 flex justify-center relative'>
                 <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} src="/Bilalmainimg.png

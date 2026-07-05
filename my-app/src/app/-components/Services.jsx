@@ -51,7 +51,7 @@ export default function Services() {
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
 
     return (
-        <section id="Services" className='w-full h-full bg-white text-black'>
+        <section id="Services" className='w-full h-full bg-amber-50 text-black'>
 
             {/* Heading — outside sticky zone so it scrolls away naturally */}
             <div className='px-6 pt-20 sm:px-8 lg:px-12'>
