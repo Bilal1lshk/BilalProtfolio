@@ -21,7 +21,7 @@ export default function Aboutme() {
                         MEEN Stack custom development
                     </h3>
                 </motion.div>
-                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100  w-[300px] md:w-[460px] absolute top-[600px]  lg:top-[400px] md:left-[740px]'>
+                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100  w-[300px] md:w-[460px] absolute top-[600px]  lg:top-[400px] lg:left-[740px]'>
                     <h3 className='uppercase p-1.5'>
                         Making apps smarter with OpenAI, LangChain & custom-trained models.
                     </h3>
