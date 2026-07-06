@@ -16,7 +16,7 @@ export default function Aboutme() {
                     Bilal | AI & MENN Stack Developer
                     Where Intelligence Meets Fullstack.
                 </motion.h3>
-                <motion.div initial={{ opacity: 0.6, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep/80 text-gray-100  h-14 absolute top-70 left-5'>
+                <motion.div initial={{ opacity: 0.6, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep/80 text-gray-100  h-14 hidden lg:absolute top-70 left-5'>
                     <h3 className='uppercase p-2.5'>
                         MEEN Stack custom development
                     </h3>
@@ -28,7 +28,7 @@ export default function Aboutme() {
                 </motion.div>
                 <div className='absolute top-96 left-0 md:left-12 text-black '>
                     <div>
-                        <h5 className='text-gray-500'>Current status</h5>
+                        <h5 className='text-gray-500'>Current <br />status</h5>
                         <div className='border-2 border-black h-[30px] w-[50px]  rounded-2xl flex justify-center items-center'>
                             <motion.div initial={{ opacity: 0.6, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} transition={{
                                 duration: 2, ease: "easeOut", repeat: Infinity,
@@ -37,7 +37,8 @@ export default function Aboutme() {
                             </motion.div>
                         </div>
                     </div>
-                    <p className='text-gray-500'>avalaible for work</p>
+                    <p className='text-gray-500'>avalaible
+                        <br /> for work</p>
                 </div>
             </div>
 
