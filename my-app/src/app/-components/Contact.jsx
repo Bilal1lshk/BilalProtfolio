@@ -32,7 +32,7 @@ export default function Contact() {
 
                         <div className='mt-8 space-y-5'>
                             <div>
-                                <p className='font-semibold text-slate-900'>Email</p>
+                                <p className='font-semibold text-slate-900 lowercase'>Email</p>
                                 <motion.p initial={{ x: -50, opacity: 0.6 }} whileInView={{ x: 0, opacity: 1 }} transition={{ ease: 'easeIn' }} viewport={{ once: true }} className='break-all p-2 text-sm text-gray-600 lowercase'>bilalsheikhsb77@gmail.com</motion.p>
                             </div>
                             <div>
