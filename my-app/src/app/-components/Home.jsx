@@ -26,7 +26,7 @@ export default function HomeALL() {
         return () => lenis.destroy();
     }, []);
     return (
-        <div className='bg-amber-50'>
+        <div className='bg-white'>
             <Navbar />
             <Aboutme />
             <Services />

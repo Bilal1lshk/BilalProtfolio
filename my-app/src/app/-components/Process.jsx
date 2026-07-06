@@ -42,7 +42,7 @@ export default function Process() {
     },
   };
   return (
-    <section id='Process' className='relative bg-amber-50 px-4 py-12 sm:px-6 lg:px-8'>
+    <section id='Process' className='relative bg-g-primary/70 px-4 py-12 sm:px-6 lg:px-8'>
       <div className='mx-auto mb-10 max-w-3xl text-center'>
         <p className='text-sm uppercase tracking-[0.3em] text-emerald-600'>Process</p>
         <h2 className='mt-4 text-4xl font-semibold text-gray-900'>How I deliver AI product work</h2>

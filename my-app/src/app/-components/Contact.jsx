@@ -17,7 +17,7 @@ export default function Contact() {
         setForm({ name: '', email: '', subject: '', message: '' })
     }
     return (
-        <section id='Hireme' className='overflow-visible bg-amber-50 px-0 py-14 text-slate-900 sm:py-16 lg:py-20'>
+        <section id='Hireme' className='overflow-visible  px-0 py-14 text-slate-900 sm:py-16 lg:py-20'>
             <div className='mx-auto flex max-w-6xl flex-col px-4 sm:px-6 lg:px-8'>
                 <div className='mx-auto max-w-3xl text-center'>
                     <motion.p initial={{ letterSpacing: '50px' }} viewport={{ once: true }} whileInView={{ letterSpacing: '2px' }} exit={{ letterSpacing: '2px' }} className='text-xs uppercase tracking-[0.3em] text-g-primary sm:text-sm'>Contact</motion.p>

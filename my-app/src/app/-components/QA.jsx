@@ -39,7 +39,7 @@ export default function QA() {
     }
 
     return (
-        <section className='h-full w-full bg-amber-50 text-slate-900'>
+        <section className='h-full w-full  text-slate-900'>
             <div className='mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-12'>
                 <div className='mx-auto max-w-3xl text-center'>
                     <p className='text-sm uppercase tracking-[0.35em] text-g-primary'>Q&A</p>

@@ -51,17 +51,17 @@ export default function Services() {
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
 
     return (
-        <section id="Services" className='w-full h-full bg-amber-50 text-black'>
+        <section id="Services" className='w-full overflow-x-hidden bg-g-light text-black'>
 
             {/* Heading — outside sticky zone so it scrolls away naturally */}
-            <div className='px-6 pt-20 sm:px-8 lg:px-12'>
-                <div className='mx-auto max-w-6xl h-auto '>
+            <div className='px-6 pt-20 sm:px-8 lg:px-12 bg-g-light'>
+                <div className='mx-auto max-w-6xl bg-g-light'>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         viewport={{ once: true, amount: 0.2 }}
-                        className='text-center'
+                        className='text-center bg-g-light'
                     >
                         <p className='mb-3 text-xl font-semibold uppercase tracking-[0.3em] text-g-primary'>
                             Services
@@ -78,15 +78,15 @@ export default function Services() {
             </div>
 
             {/* Tall wrapper — useScroll tracks this to drive horizontal motion */}
-            <div ref={containerRef} className='h-[300vh] items-center relative '>
+            <div ref={containerRef} className='relative  md:h-[120vh] h-[130vh] overflow-hidden'>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
-                <div className='sticky top-0 h-full flex items-center overflow-hidden'>
+                <div className='sticky top-0 flex h-screen items-center overflow-x-hidden overflow-y-hidden'>
 
                     {/* This is the element that actually moves horizontally */}
                     <motion.div
                         style={{ x }}
-                        className='flex gap-8 px-12 mt-10 w-max h-full'
+                        className='mt-10 flex h-full gap-4 px-4 py-4 sm:gap-6 sm:px-6 md:gap-8 md:px-12'
                     >
                         {services.map((service, index) => (
                             <motion.article
@@ -99,7 +99,7 @@ export default function Services() {
                                     ease: 'easeOut',
                                 }}
                                 viewport={{ once: true, amount: 0.2 }}
-                                className='rounded-3xl w-[400px] md:w-[480px] m-5 h-[440px] shrink-0 border border-gray-200 bg-[#f8f8f8] p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl'
+                                className='m-2 h-[510px] md:h-[440px] w-[85vw] max-w-[320px] shrink-0 rounded-3xl border border-gray-200 bg-[#f8f8f8] p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl sm:w-[320px] sm:max-w-[320px] sm:p-8 md:m-5 md:w-[360px] md:max-w-[360px] lg:w-[420px] lg:max-w-[420px]'
                             >
                                 {/* Icon */}
                                 <div className='mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-g-deep text-2xl text-white'>
