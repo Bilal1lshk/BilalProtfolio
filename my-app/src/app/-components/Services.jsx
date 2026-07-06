@@ -48,7 +48,7 @@ export default function Services() {
     })
 
     // Tune "-60%" based on number of cards — more cards = larger negative value
-    const x = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
+    const x = useTransform(scrollYProgress, [0, 1], ['0%', '-28%'])
 
     return (
         <section id="Services" className='w-full overflow-x-hidden bg-g-light text-black'>
@@ -81,7 +81,7 @@ export default function Services() {
             <div ref={containerRef} className='relative  md:h-[120vh] h-[130vh] overflow-hidden'>
 
                 {/* Sticky viewport — pins in place while user scrolls through tall wrapper */}
-                <div className='sticky top-0 flex h-screen items-center overflow-x-hidden overflow-y-hidden'>
+                <div className='sticky top-50 flex h-screen items-center overflow-x-hidden overflow-y-hidden'>
 
                     {/* This is the element that actually moves horizontally */}
                     <motion.div

@@ -88,7 +88,7 @@ export default function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex h-screen w-screen flex-col items-center justify-center bg-black px-6 text-white"
+                        className="fixed inset-0 z-50 flex h-screen w-screen flex-col items-center justify-center bg-g-primary px-6 text-white"
                     >
                         <button
                             type="button"
