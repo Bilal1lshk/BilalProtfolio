@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, stagger } from 'framer-motion'
 
 const expertiseContent = [
     {
@@ -34,11 +34,11 @@ const expertiseContent = [
 
 const cardVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: (i) => ({
+    visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, delay: i * 0.12, ease: 'easeOut' },
-    }),
+    },
+    transition: { duration: 0.6, ease: 'easeOut', staggerChildren: 0.2, },
 }
 
 export default function Expertise() {
@@ -64,11 +64,10 @@ export default function Expertise() {
                     <motion.div
 
                         key={data.title}
-                        custom={i}
                         variants={cardVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         className={`bg-g-deep/80 rounded-3xl p-7 flex flex-col justify-between  ${data?.width} min-h-[340px] border border-white/5 hover:border-g-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
                     >
                         <div>
