@@ -5,6 +5,9 @@ import "./globals.css";
 
 export const metadata = {
   title: "BilalProtfolio",
+  verification:{
+    google:"xROAJVgKDmEhC14XIs"
+  },
   description: "Bilal is an AI-driven web developer crafting custom portfolio sites, smart web apps, and automation-first digital products with polished design and modern UX.",
 };
 
