@@ -2,18 +2,24 @@ import React from 'react'
 import { FaArrowDown } from "react-icons/fa";
 import { easeOut, motion } from "framer-motion"
 export default function Aboutme() {
+    const ArrowClick = () => {
+        const element = document.getElementById("Services")
+
+        element.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+
     return (
         <div className=''>
 
             <div className='h-full w-full mt-1 flex justify-center relative'>
                 <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} src="/Bilalmainimg.png
             " className='h-[700px] w-[900px] object-cover overflow-hidden mt-24 lg:mt-2' alt="" />
-                <motion.button initial={{ opacity: 0.6, rotate: 0 }} whileInView={{ opacity: 1, rotate: 45 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} className=' hidden md:block absolute bg-black  rounded-xl p-1 top-70 text-4xl text-amber-50 md:left-[980px]'>
+                <motion.button onClick={ArrowClick} initial={{ opacity: 0.6, rotate: 0 }} whileInView={{ opacity: 1, rotate: 45 }} transition={{ delay: 1, duration: 1, ease: "easeOut" }} className=' hidden md:block absolute bg-black  rounded-xl p-1 top-70 text-4xl text-amber-50 md:left-[980px]'>
                     <FaArrowDown />
 
                 </motion.button>
                 <motion.h3 initial={{ opacity: 0.6, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='absolute top-1 p-1 text-lg md:text-xl text-g-primary '>
-                    Bilal | AI & MENN Stack Developer
+                    Bilal | FullStack Ai Developer
                     Where Intelligence Meets Fullstack.
                 </motion.h3>
                 <motion.div initial={{ opacity: 0.6, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep/80 text-gray-100  h-14 hidden lg:absolute top-70 left-5'>

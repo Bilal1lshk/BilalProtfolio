@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, stagger } from 'framer-motion'
+import { DrawCircleText } from './usedanimations/textanimations'
 
 const expertiseContent = [
     {
@@ -44,12 +45,10 @@ const cardVariants = {
 export default function Expertise() {
     return (
         <section id="Experise" className='w-full px-6 py-20 sm:px-8 lg:px-12'>
-
+            <DrawCircleText />
             {/* Heading */}
             <div className='flex flex-col items-center gap-4 text-center mb-14'>
-                <div className='bg-g-deep py-1.5 px-4 rounded-2xl'>
-                    <p className='text-g-accent text-sm font-semibold tracking-widest uppercase'>Expertise</p>
-                </div>
+             
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-g-accent'>
                     Technical depth, <span className='text-gray-500'>business focus.</span>
                 </h1>

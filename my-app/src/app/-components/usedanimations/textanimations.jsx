@@ -3,15 +3,14 @@ import { motion } from "motion/react";
 
 export const DrawCircleText = () => {
   return (
-    <div className="grid place-content-center bg-emerald-950 px-4 py-24 text-yellow-50">
+    <div className="grid place-content-center  px-4  text-yellow-50">
       <h1 className="max-w-2xl text-center text-5xl leading-snug">
-        Scale your{" "}
-        <span className="relative">
-          Marketing
+        <span className="relative mt-7 text-g-primary">
+          Expertise
           <svg
             viewBox="0 0 286 73"
             fill="none"
-            className="absolute -left-2 -right-2 -top-2 bottom-0 translate-y-1"
+            className="absolute -left-2 -right-2 -top-10 -bottom-0 translate-y-1"
           >
             <motion.path
               initial={{ pathLength: 0 }}
@@ -26,7 +25,6 @@ export const DrawCircleText = () => {
             />
           </svg>
         </span>{" "}
-        with Simple AI Tools
       </h1>
     </div>
   );
