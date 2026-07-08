@@ -1,7 +1,9 @@
 @import "tailwindcss";
 body{
   overflow: hidden;
+  cursor: pointer;
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

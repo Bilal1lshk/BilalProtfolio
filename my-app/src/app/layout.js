@@ -1,3 +1,4 @@
+
 import Navbar from "./-components/reuseable.jsx/Navbar";
 import "./globals.css";
 
@@ -12,12 +13,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en" className={` h-full antialiased`}
       suppressHydrationWarning
     >
 
       <body className="min-h-full flex flex-col font-sekuya">
+    
         {children}
       </body>
     </html>
