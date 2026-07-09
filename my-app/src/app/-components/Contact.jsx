@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion"
 import { useState } from 'react'
+import LetsWork from "./reuseable.jsx/LetsWork"
 
 export default function Contact() {
     const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
@@ -45,6 +46,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+                <LetsWork/>
 
                 <form onSubmit={handleSubmit} className='w-full rounded-[28px] border border-white/70 bg-white/90 p-5 pt-6 shadow-[0_30px_80px_rgba(15,23,42,0.08)] sm:p-8'>
                     <div className='grid gap-4 sm:grid-cols-2'>
