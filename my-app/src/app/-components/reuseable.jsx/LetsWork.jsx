@@ -26,6 +26,25 @@ export default function LetsWork() {
             }
         },
     }
+
+    const letterContainer = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.12,
+                delayChildren: 0.1,
+            },
+        },
+    }
+
+    const letterItem = {
+        hidden: { y: 60, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 0.6,
+            transition: { duration: 0.4, ease: "easeOut" },
+        },
+    }
     return (
         <div className=' text-black flex w-full h-[900px]  rounded-xl  mb-16'>
             <div className='w-full'>
@@ -50,6 +69,20 @@ export default function LetsWork() {
                             className=' object-cover' src={"/handone.png.webp"} alt="" />
 
                     </div>
+                    <motion.div
+                        variants={letterContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
+                        className='flex flex-wrap mt-5'
+                    >
+                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>B</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>i</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>a</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
+                    </motion.div>
+                 
                 </div>
 
 
