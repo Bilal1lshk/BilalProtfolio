@@ -31,11 +31,11 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const menuItems = [
-        { href: "#Services", label: "Services" },
-        { href: "#Experise", label: "Expertise" },
-        { href: "#Skills", label: "Skills" },
-        { href: "#Process", label: "Process" },
-        { href: "#Hireme", label: "Hire me" },
+        { href: "#Services", label: "Services", height: "h-[60px]" },
+        { href: "#Experise", label: "Expertise", height: "h-[80px]" },
+        { href: "#Skills", label: "Skills", height: "h-[100px]" },
+        { href: "#Process", label: "Process", height: "h-[110px]" },
+        { href: "#Hireme", label: "Hire me", height: "h-[120px]" },
     ];
 
     return (
@@ -50,25 +50,15 @@ export default function Navbar() {
                 whileInView="visible"
                 className="hidden w-full items-start justify-end text-white lg:flex"
             >
-                <motion.div variants={itemVariants} className="h-[60px] bg-g-accent p-3.5">
-                    <Link href="#Services">Services</Link>
-                </motion.div>
-
-                <motion.div variants={itemVariants} className="h-[80px] bg-g-accent p-3.5">
-                    <Link href="#Experise">Expertise</Link>
-                </motion.div>
-
-                <motion.div variants={itemVariants} className="h-[100px] bg-g-accent p-3.5">
-                    <Link href="#Skills">Skills</Link>
-                </motion.div>
-
-                <motion.div variants={itemVariants} className="h-[110px] bg-g-accent p-3.5">
-                    <Link href="#Process">Process</Link>
-                </motion.div>
-
-                <motion.div variants={itemVariants} className="h-[120px] bg-g-accent p-3.5">
-                    <Link href="#Hireme">Hire me</Link>
-                </motion.div>
+                {menuItems.map((item) => (
+                    <motion.div
+                        key={item.href}
+                        variants={itemVariants}
+                        className={`${item.height} bg-g-accent p-3.5 hover:bg-g-deep transition duration-300 ease-in-out`}
+                    >
+                        <Link href={item.href}>{item.label}</Link>
+                    </motion.div>
+                ))}
             </motion.div>
 
             <div className="my-auto block pr-6 lg:hidden">

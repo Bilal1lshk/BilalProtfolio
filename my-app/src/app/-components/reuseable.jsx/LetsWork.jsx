@@ -61,7 +61,7 @@ export default function LetsWork() {
                             className=' object-cover' src={"/handtwo.png.webp"} alt="" />
 
                     </div>
-                    <div><motion.h5 initial={{ y: 90, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className=' text-center text-3xl mt-3 '>LETS WORK TOGRTHER</motion.h5></div>
+                    <div><motion.h5 initial={{ y: 90, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className=' text-center text-3xl mt-3 '>LETS WORK <span className="text-g-accent">Together</span></motion.h5></div>
                     <div className='flex justify-end w-full'>
                         <motion.img variants={contaainer}
                             initial="hidden"
