@@ -20,7 +20,7 @@ export default function LetsWork() {
     const contaainer = {
         hidden: { height: "100px" },
         visible: {
-            height: ismobile?"260px":"160px",
+            height: ismobile ? "260px" : "160px",
             transition: {
                 duration: 0.5, ease: "easeInOut"
             }
@@ -74,15 +74,15 @@ export default function LetsWork() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.3 }}
-                        className='flex flex-wrap mt-5'
+                        className='flex flex-row flex-wrap mt-5'
                     >
-                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>B</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>i</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>a</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5 w-full sm:w-auto text-[120px] sm:text-[160px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5    text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>B</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>i</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>a</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
                     </motion.div>
-                 
+
                 </div>
 
 
