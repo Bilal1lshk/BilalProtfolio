@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { useState } from 'react'
 import LetsWork from "./reuseable.jsx/LetsWork"
+import axios from "axios"
 
 export default function Contact() {
     const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
@@ -12,8 +13,16 @@ export default function Contact() {
         setForm((prev) => ({ ...prev, [name]: value }))
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
+        const url = process.env.NEXT_PUBLIC_DATA_KEY
+        if (!url) {
+            setStatus('Missing NEXT_PUBLIC_DATA_KEY environment variable.')
+            return
+        }
+
+        const data = await axios.post(url, { data: form })
+        console.log(data)
         setStatus('Thank you! Your message has been prepared. I will follow up shortly.')
         setForm({ name: '', email: '', subject: '', message: '' })
     }
