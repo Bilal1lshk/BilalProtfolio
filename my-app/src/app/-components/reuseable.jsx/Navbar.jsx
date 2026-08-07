@@ -32,6 +32,7 @@ export default function Navbar() {
 
     const menuItems = [
         { href: "#Services", label: "Services", height: "h-[60px]" },
+        { href: "#Projects", label: "Projects", height: "h-[70px]" },
         { href: "#Experise", label: "Expertise", height: "h-[80px]" },
         { href: "#Skills", label: "Skills", height: "h-[100px]" },
         { href: "#Process", label: "Process", height: "h-[110px]" },
