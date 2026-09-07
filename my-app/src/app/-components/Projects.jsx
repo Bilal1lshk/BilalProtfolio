@@ -4,6 +4,25 @@ import ProjectCard from './reuseable.jsx/ProjectCard'
 
 const projects = [
     {
+        title: 'LeadWise — AI Lead Management CRM',
+        description:
+            'A multi-tenant CRM platform designed to help small sales teams manage leads, track sales pipelines, schedule follow-ups, and collaborate in shared workspaces. Features role-based access control, team management, analytics, task scheduling, and a built-in AI chatbot assistant.',
+        image: '/leadwise.png',
+        stack: [
+            'Next.js',
+            'React',
+            'TypeScript',
+            'MongoDB',
+            'Mongoose',
+            'Redux Toolkit',
+            'Tailwind CSS',
+            'Python',
+            'FastAPI',
+        ],
+        liveUrl: 'https://leadmanagmentsystem-nu.vercel.app/',
+        githubUrl: 'https://github.com/Bilal1lshk/Leadmanagmentsystem',
+    },
+    {
         title: 'Job Portal ',
         description:
             'A full-stack job portal that connects job seekers with employers through a modern, responsive platform. Users can create accounts, browse job listings, apply for positions, and manage their applications, while recruiters can post jobs, review applicants, and manage hiring workflows through a dedicated dashboard.',

@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -49,9 +50,15 @@ export default function LetsWork() {
         <div className=' text-black flex w-full h-[900px]  rounded-xl  mb-16'>
             <div className='w-full'>
                 <div className='flex flex-col md:flex-row flex-wrap justify-between mb-10 p-4'>
-                    <div className='flex flex-col justify-center items-center gap-2'><h3>Instragram</h3> <FaInstagram className='text-2xl' /></div>
-                    <div className='flex flex-col justify-center items-center gap-2'><h3>Linkden</h3> <FaLinkedin className='text-2xl' /></div>
-                    <div className='flex flex-col justify-center items-center gap-2'><h3>Github</h3> <FaGithub className='text-2xl' /></div>
+                <Link href="https://www.instagram.com/bilalshk280/" target="_blank" rel="noopener noreferrer">
+                        <div className='flex flex-col justify-center items-center gap-2'><h3>Instragram</h3> <FaInstagram className='text-2xl' /></div>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/bilal-ahmad-439680343/" target="_blank" rel="noopener noreferrer">
+                        <div className='flex flex-col justify-center items-center gap-2'><h3>Linkden</h3> <FaLinkedin className='text-2xl' /></div>
+                    </Link>
+                    <Link href="https://github.com/Bilal1lshk" target="_blank" rel="noopener noreferrer">
+                        <div className='flex flex-col justify-center items-center gap-2'><h3>Github</h3> <FaGithub className='text-2xl' /></div>
+                    </Link>
                 </div>
                 <div className='h-full min-w-full '>
                     <div className='flex justify-start w-full'>
