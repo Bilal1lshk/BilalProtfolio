@@ -55,9 +55,9 @@ export default function Navbar() {
                     <motion.div
                         key={item.href}
                         variants={itemVariants}
-                        className={`${item.height} bg-g-accent p-3.5 hover:bg-g-deep transition duration-300 ease-in-out`}
+                        className={`${item.height} bg-g-deep/60 p-3.5 hover:bg-g-accent transition duration-300 ease-in-out`}
                     >
-                        <Link href={item.href}>{item.label}</Link>
+                        <Link className="text-xl text-white " href={item.href}>{item.label}</Link>
                     </motion.div>
                 ))}
             </motion.div>

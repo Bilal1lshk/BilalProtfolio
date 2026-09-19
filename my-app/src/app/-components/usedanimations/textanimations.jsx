@@ -6,7 +6,7 @@ export const DrawCircleText = () => {
     <div className="grid place-content-center  px-4  text-yellow-50">
       <h1 className="max-w-2xl text-center text-5xl leading-snug">
         <span className="relative inline-block text-2xl md:text-5xl mb-10 mt-4 md:mt-8 text-g-primary">
-          <span className="block -mt-7 md:-mt-0 px-3 py-2">Expertise</span>
+          <span className="block -mt-7 md:-mt-9 px-3 py-2 text-3xl">Expertise</span>
           <svg
             viewBox="0 0 286 73"
             fill="none"

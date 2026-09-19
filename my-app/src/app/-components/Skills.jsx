@@ -76,7 +76,7 @@ export default function Expertise() {
                                 </span>
                             </div>
                             <h2 className='text-xl font-bold text-green-200 mb-3'>{data.title}</h2>
-                            <p className='text-sm text-white/80 leading-relaxed'>{data.description}</p>
+                            <p className='text-sm text-white text leading-relaxed'>{data.description}</p>
                         </div>
 
                         <div className='flex flex-wrap gap-2 mt-6'>

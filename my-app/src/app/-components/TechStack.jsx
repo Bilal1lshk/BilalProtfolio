@@ -26,7 +26,7 @@ const techCategories = [
 export default function TechStack() {
     return (
         <div className=''>
-            <div id='Skills' className='relative overflow-hidden rounded-[28px] border pb-[180px] border-white/50 bg-gradient-to-br from-gray-50 via-white to-emerald-50 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-md'>
+            <div id='Skills' className='relative  overflow-hidden rounded-[28px] border pb-[180px] border-white/50 bg-gradient-to-br from-gray-50 via-white to-emerald-50 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-md'>
                 <div className='pointer-events-none absolute left-1/2 top-0 -z-10 h-[320px] w-[520px] -translate-x-1/2 rounded-full bg-g-accent/20 blur-[70px]' />
 
                 <div className='mx-auto max-w-5xl'>
@@ -53,10 +53,10 @@ export default function TechStack() {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4, ease: "easeIn", duration: 0.3 }}
                                 key={category.title}
-                                className={`group relative z-10 flex flex-col ${index === 1 || index === 3 ? "self-end" : ""} rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[80%] md:w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
+                                className={`group relative z-10 flex flex-col ${index === 1 || index === 3 ? "self-end" : ""}  ${index===3 ? "":""} rounded-2xl border border-emerald-100 bg-g-primary p-5 w-[80%] md:w-[50%] h-auto transition-transform duration-300 hover:-translate-y-1`}
                             >
                                 <motion.div className={`${index === 0 || index === 2 ? "absolute -bottom-50 -z-10 left-[50%] h-[200px] w-1 bg-g-light" : ""}`}></motion.div>
-                                <motion.div initial={{ heigth: 0 }} whileInView={{ heigth: "4px" }} transition={{ease: "easeIn", duration: 0.3 }} className={`${index === 1 || index === 3 ? "absolute top-40 -z-10 -left-[50%] h-[4px] w-0 md:w-[255px] bg-g-light" : ""}`}></motion.div>
+                                <motion.div initial={{ heigth: 0 }} whileInView={{ heigth: "4px" }} transition={{ease: "easeIn", duration: 0.3 }} className={`${index === 1 || index === 3 ? "absolute top-40 -z-10 -left-[50%] h-[4px] w-0 md:w-[257px] bg-g-light" : ""}`}></motion.div>
 
                                 <h3 className=' font-semibold bg-g-deep  flex justify-center text-xl md:text-2xl p-2 rounded-xl text-white'>{category.title}</h3>
                                 <p className='mt-2 text-sm leading-6 text-gray-200'>{category.description}</p>
