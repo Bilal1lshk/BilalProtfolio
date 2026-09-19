@@ -42,8 +42,8 @@ export default function Contact() {
 
                         <div className='mt-8 space-y-5'>
                             <div>
-                                <p className=' text-slate-900 lowercase'>Email</p>
-                                <motion.p initial={{ x: -50, opacity: 0.6 }} whileInView={{ x: 0, opacity: 1 }} transition={{ ease: 'easeIn', duration: 3, delay:1, repeat:Infinity}} viewport={{ once: true }} className='break-all p-2  text-gray-900 font-sans text-2xl lowercase'>bilalsheikhsb77@gmail.com</motion.p>
+                                <p className='font-semibold text-slate-900'>Email</p>
+                                <motion.p initial={{ x: -50, opacity: 0.6 }} whileInView={{ x: 0, opacity: 1 }} transition={{ ease: 'easeIn', duration: 3, delay:1, repeat:Infinity}} viewport={{ once: true }} className='break-all p-2 text-g-deep font-semibold text-xl sm:text-2xl lowercase tracking-tight'>bilalsheikhsb77@gmail.com</motion.p>
                         </div>
                         <div>
                             <p className='font-semibold text-slate-900'>Availability</p>

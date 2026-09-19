@@ -1,15 +1,9 @@
 @import "tailwindcss";
-body{
-  overflow: hidden;
-  cursor: pointer;
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 @theme {
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
   --color-brand-black: #000000;
   --color-brand-dark:  #18181b;
   --color-brand-card:  #27272a;
@@ -25,22 +19,12 @@ body{
   --color-text-muted:  #a1a1aa;
   --color-text-accent: #34d399;
 }
-::-webkit-scrollbar {
-    width: 10px;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* track color */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #10b981; /* your green — the draggable part */
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #059669; /* darker green on hover */
-}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -50,17 +34,38 @@ body{
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
   max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
 }

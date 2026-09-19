@@ -18,24 +18,23 @@ export default function Aboutme() {
                     <FaArrowDown />
 
                 </motion.button>
-                <motion.h3 initial={{ opacity: 0.6, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='absolute top-1 p-1 text-lg md:text-xl text-g-primary '>
-                    Bilal | FullStack Ai Developer
-                    Where Intelligence Meets Fullstack.
+                <motion.h3 initial={{ opacity: 0.6, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='absolute top-1 p-1 text-lg md:text-xl font-medium tracking-wide text-g-primary'>
+                    Bilal | FullStack AI Developer &bull; Where Intelligence Meets Fullstack.
                 </motion.h3>
-                <motion.div initial={{ opacity: 0.6, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep/80 text-gray-100  h-14 hidden lg:absolute top-70 left-5'>
-                    <h3 className='uppercase p-2.5'>
-                        MEEN Stack custom development
+                <motion.div initial={{ opacity: 0.6, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep/80 text-gray-100 rounded-lg h-14 hidden lg:absolute top-70 left-5'>
+                    <h3 className='uppercase p-2.5 text-xs tracking-wider font-semibold'>
+                        MERN Stack custom development
                     </h3>
                 </motion.div>
-                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100  w-[300px] md:w-[460px] absolute top-[600px]  lg:top-[400px] lg:left-[740px]'>
-                    <h3 className='uppercase p-1.5'>
+                <motion.div initial={{ opacity: 0.6, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='bg-g-deep text-gray-100 rounded-lg w-[300px] md:w-[460px] absolute top-[600px] lg:top-[400px] lg:left-[740px]'>
+                    <h3 className='uppercase p-2 text-xs tracking-wider font-semibold'>
                         Making apps smarter with OpenAI, LangChain & custom-trained models.
                     </h3>
                 </motion.div>
                 <div className='absolute top-96 left-0 md:left-12 text-black '>
                     <div>
-                        <h5 className='text-gray-500'>Current <br />status</h5>
-                        <div className='border-2 border-black h-[30px] w-[50px]  rounded-2xl flex justify-center items-center'>
+                        <h5 className='text-xs font-semibold uppercase tracking-wider text-gray-500'>Current <br />status</h5>
+                        <div className='border-2 border-black h-[30px] w-[50px] rounded-2xl flex justify-center items-center my-1'>
                             <motion.div initial={{ opacity: 0.6, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} transition={{
                                 duration: 2, ease: "easeOut", repeat: Infinity,
                             }} className='bg-black rounded-3xl w-[50px] h-[30px] origin-center'>
@@ -43,8 +42,7 @@ export default function Aboutme() {
                             </motion.div>
                         </div>
                     </div>
-                    <p className='text-gray-500'>avalaible
-                        <br /> for work</p>
+                    <p className='text-xs font-medium uppercase tracking-wider text-gray-500'>Available<br />for work</p>
                 </div>
             </div>
 

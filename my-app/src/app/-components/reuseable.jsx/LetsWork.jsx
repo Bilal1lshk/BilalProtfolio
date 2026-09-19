@@ -51,13 +51,13 @@ export default function LetsWork() {
             <div className='w-full'>
                 <div className='flex flex-col md:flex-row flex-wrap justify-between mb-10 p-4'>
                 <Link href="https://www.instagram.com/bilalshk280/" target="_blank" rel="noopener noreferrer">
-                        <div className='flex flex-col justify-center items-center gap-2'><h3>Instragram</h3> <FaInstagram className='text-2xl' /></div>
+                        <div className='flex flex-col justify-center items-center gap-2'><h3 className='text-sm font-medium tracking-wide'>Instagram</h3> <FaInstagram className='text-2xl' /></div>
                     </Link>
                     <Link href="https://www.linkedin.com/in/bilal-ahmad-439680343/" target="_blank" rel="noopener noreferrer">
-                        <div className='flex flex-col justify-center items-center gap-2'><h3>Linkden</h3> <FaLinkedin className='text-2xl' /></div>
+                        <div className='flex flex-col justify-center items-center gap-2'><h3 className='text-sm font-medium tracking-wide'>LinkedIn</h3> <FaLinkedin className='text-2xl' /></div>
                     </Link>
                     <Link href="https://github.com/Bilal1lshk" target="_blank" rel="noopener noreferrer">
-                        <div className='flex flex-col justify-center items-center gap-2'><h3>Github</h3> <FaGithub className='text-2xl' /></div>
+                        <div className='flex flex-col justify-center items-center gap-2'><h3 className='text-sm font-medium tracking-wide'>GitHub</h3> <FaGithub className='text-2xl' /></div>
                     </Link>
                 </div>
                 <div className='h-full min-w-full '>
@@ -68,7 +68,7 @@ export default function LetsWork() {
                             className=' object-cover' src={"/handtwo.png.webp"} alt="" />
 
                     </div>
-                    <div><motion.h5 initial={{ y: 90, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className=' text-center text-3xl mt-3 '>LETS WORK <span className="text-g-accent">Together</span></motion.h5></div>
+                    <div><motion.h5 initial={{ y: 90, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className='text-center text-3xl font-bold tracking-tight mt-3'>LET&apos;S WORK <span className="text-g-accent">Together</span></motion.h5></div>
                     <div className='flex justify-end w-full'>
                         <motion.img variants={contaainer}
                             initial="hidden"
@@ -81,13 +81,13 @@ export default function LetsWork() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.3 }}
-                        className='flex flex-row flex-wrap mt-5'
+                        className='flex flex-row flex-wrap mt-5 justify-center'
                     >
-                        <motion.h1 variants={letterItem} className='mt-5    text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>B</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>i</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>a</motion.h1>
-                        <motion.h1 variants={letterItem} className='mt-5  text-[65px] md:text-[200px] inset-0 opacity-[0.6]'>l</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 font-black tracking-tighter text-[65px] md:text-[200px] inset-0 opacity-[0.6] select-none'>B</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 font-black tracking-tighter text-[65px] md:text-[200px] inset-0 opacity-[0.6] select-none'>i</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 font-black tracking-tighter text-[65px] md:text-[200px] inset-0 opacity-[0.6] select-none'>l</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 font-black tracking-tighter text-[65px] md:text-[200px] inset-0 opacity-[0.6] select-none'>a</motion.h1>
+                        <motion.h1 variants={letterItem} className='mt-5 font-black tracking-tighter text-[65px] md:text-[200px] inset-0 opacity-[0.6] select-none'>l</motion.h1>
                     </motion.div>
 
                 </div>
